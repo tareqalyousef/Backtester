@@ -1,0 +1,5 @@
+#pragma once
+
+#define DEFAULT_INTIIAL_EQUITY 25000
+#define DEFAULT_START_DATE Date(1, 1, 2000)
+#define DEFAULT_END_DATE Date(1, 1, 2010)

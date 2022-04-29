@@ -1,0 +1,65 @@
+\hypertarget{classOrder}{}\doxysection{Order Class Reference}
+\label{classOrder}\index{Order@{Order}}
+
+
+Represents an order to open or close a position.  
+
+
+
+
+{\ttfamily \#include $<$order.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOrder_aa88b067054a26dd04c2b25b41996b7b0}\label{classOrder_aa88b067054a26dd04c2b25b41996b7b0}} 
+enum \mbox{\hyperlink{classOrder_aa88b067054a26dd04c2b25b41996b7b0}{Order\+Type}} \{ {\bfseries O\+P\+EN}, 
+{\bfseries C\+L\+O\+SE}
+ \}
+\begin{DoxyCompactList}\small\item\em Denotes an open or close position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOrder_a20ed44d46cbd77fc36def260df465137}\label{classOrder_a20ed44d46cbd77fc36def260df465137}} 
+enum \mbox{\hyperlink{classOrder_a20ed44d46cbd77fc36def260df465137}{Action\+Type}} \{ {\bfseries L\+I\+M\+IT}, 
+{\bfseries M\+A\+R\+K\+ET}
+ \}
+\begin{DoxyCompactList}\small\item\em Denotes a market or limit order type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOrder_a37700b975036b04503288b5c8d680358}\label{classOrder_a37700b975036b04503288b5c8d680358}} 
+\mbox{\hyperlink{classOrder_a37700b975036b04503288b5c8d680358}{Order}} (\mbox{\hyperlink{classDate}{Date}} timestamp, string symbol, int shares, \mbox{\hyperlink{classOrder_aa88b067054a26dd04c2b25b41996b7b0}{Order\+Type}} order\+Type, \mbox{\hyperlink{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}{Position\+::\+Position\+Type}} position\+Type)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classOrder}{Order}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOrder_ac8255a1719fb1a4f4465d6293289498f}\label{classOrder_ac8255a1719fb1a4f4465d6293289498f}} 
+\mbox{\hyperlink{classOrder_ac8255a1719fb1a4f4465d6293289498f}{Order}} (\mbox{\hyperlink{classDate}{Date}} timestamp, string symbol, int shares, double limit, \mbox{\hyperlink{classOrder_aa88b067054a26dd04c2b25b41996b7b0}{Order\+Type}} order\+Type, \mbox{\hyperlink{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}{Position\+::\+Position\+Type}} position\+Type)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classOrder}{Order}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOrder_a762b5079082b931e63c40fc8a19136d5}\label{classOrder_a762b5079082b931e63c40fc8a19136d5}} 
+\mbox{\hyperlink{classOrder_a762b5079082b931e63c40fc8a19136d5}{Order}} (\mbox{\hyperlink{classOrder}{Order}} $\ast$old, int new\+Shares)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classOrder}{Order}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOrder_ae94620a142ed94b77e05373da541e8f8}\label{classOrder_ae94620a142ed94b77e05373da541e8f8}} 
+double \mbox{\hyperlink{classOrder_ae94620a142ed94b77e05373da541e8f8}{get\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Get the limit for a limit order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOrder_a833d61f8957068051192f233cb9ca57b}\label{classOrder_a833d61f8957068051192f233cb9ca57b}} 
+int \mbox{\hyperlink{classOrder_a833d61f8957068051192f233cb9ca57b}{get\+Shares}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of shares we are interested in. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOrder_afaa8ce8d6554cdcedee712f974d40548}\label{classOrder_afaa8ce8d6554cdcedee712f974d40548}} 
+\mbox{\hyperlink{classDate}{Date}} \mbox{\hyperlink{classOrder_afaa8ce8d6554cdcedee712f974d40548}{get\+Timestamp}} ()
+\begin{DoxyCompactList}\small\item\em Get the time the order was placed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOrder_acd62cbb779355df0225ba4fd81bc4721}\label{classOrder_acd62cbb779355df0225ba4fd81bc4721}} 
+string \mbox{\hyperlink{classOrder_acd62cbb779355df0225ba4fd81bc4721}{get\+Symbol}} ()
+\begin{DoxyCompactList}\small\item\em Get the underlying asset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOrder_a56c9d3551cebe06c2a836b1d98d92db1}\label{classOrder_a56c9d3551cebe06c2a836b1d98d92db1}} 
+\mbox{\hyperlink{classOrder_aa88b067054a26dd04c2b25b41996b7b0}{Order\+Type}} \mbox{\hyperlink{classOrder_a56c9d3551cebe06c2a836b1d98d92db1}{get\+Order\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the order type (open or close). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOrder_aec0d59ca25e53d93f334ecc61759240e}\label{classOrder_aec0d59ca25e53d93f334ecc61759240e}} 
+\mbox{\hyperlink{classOrder_a20ed44d46cbd77fc36def260df465137}{Action\+Type}} \mbox{\hyperlink{classOrder_aec0d59ca25e53d93f334ecc61759240e}{get\+Action\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the action type (market or limit). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOrder_a01329e4a88dc45584b0cfabb08bba054}\label{classOrder_a01329e4a88dc45584b0cfabb08bba054}} 
+\mbox{\hyperlink{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}{Position\+::\+Position\+Type}} \mbox{\hyperlink{classOrder_a01329e4a88dc45584b0cfabb08bba054}{get\+Position\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the position type (long or short). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an order to open or close a position. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/tareq/workplace/backtester/include/order.\+h\end{DoxyCompactItemize}

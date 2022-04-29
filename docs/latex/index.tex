@@ -1,0 +1,79 @@
+Backtest trading strategies in a multithreaded C\+LI application. This backtester was written entirely in C++ and uses data from \href{https://www.alphavantage.co/}{\texttt{ Alpha Vantage}}. Docs created using \href{https://github.com/doxygen/doxygen}{\texttt{ Doxygen}}.\hypertarget{index_autotoc_md0}{}\doxysection{Getting started}\label{index_autotoc_md0}
+First, clone the repository\+:
+
+{\ttfamily git clone \href{https://github.com/tareqalyousef/Backtester.git}{\texttt{ https\+://github.\+com/tareqalyousef/\+Backtester.\+git}}}
+
+Next, navigate to the {\ttfamily /build} directory and build the project\+:
+
+{\ttfamily cmake ../ \&\& make}\hypertarget{index_autotoc_md1}{}\doxysection{Documentation}\label{index_autotoc_md1}
+For a detailed list of the source files and descriptions, open {\ttfamily index.\+html} in the {\ttfamily /docs} folder.\hypertarget{index_autotoc_md2}{}\doxysection{Commands}\label{index_autotoc_md2}
+For a list of commands, use {\ttfamily ./backtester help}.\hypertarget{index_autotoc_md3}{}\doxysection{Creating a trading strategy}\label{index_autotoc_md3}
+All strategies inherit from {\ttfamily \mbox{\hyperlink{classStrategy}{Strategy}}}, which contains boilerplate for creating a strategy. It contains a list of all orders, positions, market data, and metrics.
+
+Create a class that inherits from {\ttfamily \mbox{\hyperlink{classStrategy}{Strategy}}}. You are given a few virtual functions to implement\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{class ExampleStrategy : public Strategy \{}
+\DoxyCodeLine{    public:}
+\DoxyCodeLine{        void onInitialize();}
+\DoxyCodeLine{        void onDay();}
+\DoxyCodeLine{        void onOrderFilled(Order* order, Position* position, double price, int shares);}
+\DoxyCodeLine{\};}
+\end{DoxyCode}
+
+
+Inside the {\ttfamily on\+Initialize()} method, you can adjust parameters for your algorithm. For example, you can modify the start date, end date, initial equity. You will need to load symbols using {\ttfamily add\+Symbol()}.
+
+The bulk of your algorithm will exist in the {\ttfamily on\+Day()} method. Here, you can analyze all new market data for the date and act accordingly. For example, you can analyze how a provided symbol has performed today by pulling its tradebars using {\ttfamily get\+Market()}. With this information, you might want to create an order with {\ttfamily create\+Order()}.
+
+Once you have created your class, add it to the driver in {\ttfamily main.\+cpp}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{Driver driver(\{ new ExampleStrategy() \});}
+\end{DoxyCode}
+
+
+When a backtest starts, a {\ttfamily \mbox{\hyperlink{classDriver}{Driver}}} object will continuously call the {\ttfamily on\+Day()} member function of your strategy until the end date has been reached. Market data is updated \char`\"{}daily\char`\"{} before the function is called.
+
+To be more precise, this is the order of execution every \char`\"{}day\char`\"{}\+:
+
+1) Market data is updated to include tradebars of all included symbols for the date 2) Equity is adjusted to account for aftermarket moves from previous date to today 3) All pending orders are processed 4) Equity is adjusted to account for moves in the market today 5) The strategy member method {\ttfamily on\+Day()} is called.\hypertarget{index_autotoc_md4}{}\doxysection{Backtesting the strategy}\label{index_autotoc_md4}
+Call the build command. An example output\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ ./backtester backtest "example strategy"}
+\DoxyCodeLine{}
+\DoxyCodeLine{Starting backtest for example strategy}
+\DoxyCodeLine{[1/3] Initializing...}
+\DoxyCodeLine{[2/3] Collecting data...}
+\DoxyCodeLine{[3/3] Performing backtest...}
+\DoxyCodeLine{}
+\DoxyCodeLine{Logs:}
+\DoxyCodeLine{No logs recorded}
+\DoxyCodeLine{}
+\DoxyCodeLine{Backtest results for example strategy}
+\DoxyCodeLine{CAGR: 25.28\%}
+\DoxyCodeLine{Sharpe Ratio: 0.77}
+\DoxyCodeLine{Sortino Ratio: 0.93}
+\DoxyCodeLine{Calmar Ratio: 0.49}
+\DoxyCodeLine{Max drawdown: 51.72\%}
+\DoxyCodeLine{Initial Equity: \$25000}
+\DoxyCodeLine{Final Equity: \$201484.06}
+\DoxyCodeLine{Wins: 30}
+\DoxyCodeLine{Losses: 42}
+\DoxyCodeLine{Number of trades: 72}
+\DoxyCodeLine{Winrate: 41.67\%}
+\DoxyCodeLine{Average win: 16.78\%}
+\DoxyCodeLine{Average loss: -\/5.32\%}
+\DoxyCodeLine{Percent daily return st. deviation: 1.97}
+\DoxyCodeLine{Start date: 29/12/2000}
+\DoxyCodeLine{End date: 13/4/2010}
+\DoxyCodeLine{Backtest duration: 2333 days}
+\DoxyCodeLine{Backtest duration (w/ weekends): 3392 days}
+\end{DoxyCode}
+ 

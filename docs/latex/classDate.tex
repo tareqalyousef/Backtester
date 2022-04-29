@@ -1,0 +1,90 @@
+\hypertarget{classDate}{}\doxysection{Date Class Reference}
+\label{classDate}\index{Date@{Date}}
+
+
+Represents a single calendar date.  
+
+
+
+
+{\ttfamily \#include $<$date.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structDate_1_1DateHash}{Date\+Hash}}
+\begin{DoxyCompactList}\small\item\em Used to hash a \mbox{\hyperlink{classDate}{Date}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDate_a4e59ed4ba66eec61c27460c5d09fa1bd}\label{classDate_a4e59ed4ba66eec61c27460c5d09fa1bd}} 
+\mbox{\hyperlink{classDate_a4e59ed4ba66eec61c27460c5d09fa1bd}{Date}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classDate}{Date}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDate_a92e7cce1b4789d22439c07d421768434}\label{classDate_a92e7cce1b4789d22439c07d421768434}} 
+\mbox{\hyperlink{classDate_a92e7cce1b4789d22439c07d421768434}{Date}} (int month, int day, int year)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classDate}{Date}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDate_a229acd3344780529ba6b7255b87b01f0}\label{classDate_a229acd3344780529ba6b7255b87b01f0}} 
+int \mbox{\hyperlink{classDate_a229acd3344780529ba6b7255b87b01f0}{get\+Year}} ()
+\begin{DoxyCompactList}\small\item\em Get the year of date. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDate_a04d8a4d8bcfc67f7167c66a635e2f35a}\label{classDate_a04d8a4d8bcfc67f7167c66a635e2f35a}} 
+int \mbox{\hyperlink{classDate_a04d8a4d8bcfc67f7167c66a635e2f35a}{get\+Month}} ()
+\begin{DoxyCompactList}\small\item\em Get the one-\/indexed integer representation of month of the year. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDate_a7d6dd2901ebf17d14caeecc6bc0cee24}\label{classDate_a7d6dd2901ebf17d14caeecc6bc0cee24}} 
+int \mbox{\hyperlink{classDate_a7d6dd2901ebf17d14caeecc6bc0cee24}{get\+Day}} ()
+\begin{DoxyCompactList}\small\item\em Get the day of the month. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDate_acea092b2ea17a12c3d4bac5c41fbd12e}\label{classDate_acea092b2ea17a12c3d4bac5c41fbd12e}} 
+int {\bfseries operator-\/} (const \mbox{\hyperlink{classDate}{Date}} \&other) const
+\item 
+\mbox{\Hypertarget{classDate_ab2943ef426612046e084e2d885c5fed4}\label{classDate_ab2943ef426612046e084e2d885c5fed4}} 
+bool {\bfseries operator$>$} (const \mbox{\hyperlink{classDate}{Date}} \&other) const
+\item 
+\mbox{\Hypertarget{classDate_a93d583e1a8eae7cc606a6fdbfc3c5c58}\label{classDate_a93d583e1a8eae7cc606a6fdbfc3c5c58}} 
+bool {\bfseries operator$>$=} (const \mbox{\hyperlink{classDate}{Date}} \&other) const
+\item 
+\mbox{\Hypertarget{classDate_a56469dbfb6a0c32326330796cb316881}\label{classDate_a56469dbfb6a0c32326330796cb316881}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classDate}{Date}} \&other) const
+\item 
+\mbox{\Hypertarget{classDate_aff6e110a1bba92225dfa094e904c003e}\label{classDate_aff6e110a1bba92225dfa094e904c003e}} 
+bool {\bfseries operator$<$=} (const \mbox{\hyperlink{classDate}{Date}} \&other) const
+\item 
+\mbox{\Hypertarget{classDate_a3b103cc8257d3055aedb519fff343503}\label{classDate_a3b103cc8257d3055aedb519fff343503}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classDate}{Date}} \&other) const
+\item 
+\mbox{\Hypertarget{classDate_af47f5313d22ea8a75eb9270d433abd6b}\label{classDate_af47f5313d22ea8a75eb9270d433abd6b}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classDate}{Date}} \&other) const
+\item 
+\mbox{\Hypertarget{classDate_a4a8dd65e13e24ed79972c4ed0596f926}\label{classDate_a4a8dd65e13e24ed79972c4ed0596f926}} 
+\mbox{\hyperlink{classDate}{Date}} \& {\bfseries operator++} ()
+\item 
+\mbox{\Hypertarget{classDate_a63f7060a7a7997e289e5e885f84557e5}\label{classDate_a63f7060a7a7997e289e5e885f84557e5}} 
+\mbox{\hyperlink{classDate}{Date}} {\bfseries operator++} (int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDate_a34899423ecff6d125a5a437b50e3b6ca}\label{classDate_a34899423ecff6d125a5a437b50e3b6ca}} 
+static int \mbox{\hyperlink{classDate_a34899423ecff6d125a5a437b50e3b6ca}{days\+In\+Month}} (int year, int month)
+\begin{DoxyCompactList}\small\item\em Get the number of days of a given month and year. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDate_ab80f9d669121d47d21562ab5dc9e6986}\label{classDate_ab80f9d669121d47d21562ab5dc9e6986}} 
+static int \mbox{\hyperlink{classDate_ab80f9d669121d47d21562ab5dc9e6986}{days\+Between}} (\mbox{\hyperlink{classDate}{Date}} first, \mbox{\hyperlink{classDate}{Date}} second)
+\begin{DoxyCompactList}\small\item\em Get the number of days between two dates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDate_a70ed98d1100b7d20fe8c91d9246d48d6}\label{classDate_a70ed98d1100b7d20fe8c91d9246d48d6}} 
+static int \mbox{\hyperlink{classDate_a70ed98d1100b7d20fe8c91d9246d48d6}{get\+Day\+Number}} (\mbox{\hyperlink{classDate}{Date}} date)
+\begin{DoxyCompactList}\small\item\em Calculate day number according to Gregordian calendar. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDate_ad1f7e3f5ff69f932d11db9a48ef88e5d}\label{classDate_ad1f7e3f5ff69f932d11db9a48ef88e5d}} 
+static \mbox{\hyperlink{classDate}{Date}} \mbox{\hyperlink{classDate_ad1f7e3f5ff69f932d11db9a48ef88e5d}{from\+String}} (string date)
+\begin{DoxyCompactList}\small\item\em Construct a date from a string timestamp in M\+M/\+D\+D/\+Y\+Y\+YY format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDate_a7396647c65aa5f260ed37f8fc369fe5f}\label{classDate_a7396647c65aa5f260ed37f8fc369fe5f}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \mbox{\hyperlink{classDate}{Date}} \&date)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single calendar date. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/tareq/workplace/backtester/include/date.\+h\end{DoxyCompactItemize}

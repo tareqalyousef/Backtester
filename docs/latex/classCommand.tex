@@ -1,0 +1,43 @@
+\hypertarget{classCommand}{}\doxysection{Command Class Reference}
+\label{classCommand}\index{Command@{Command}}
+
+
+Abstract class used to build commands that can be executed on command-\/line.  
+
+
+
+
+{\ttfamily \#include $<$command.\+h$>$}
+
+Inheritance diagram for Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCommand}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCommand_aaf4fb3e622d141457d1e448fd06dbb2a}\label{classCommand_aaf4fb3e622d141457d1e448fd06dbb2a}} 
+\mbox{\hyperlink{classCommand_aaf4fb3e622d141457d1e448fd06dbb2a}{Command}} (string name, string description, vector$<$ string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classCommand}{Command}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommand_ab6fda5dea9076a32984eb8b56013f5e2}\label{classCommand_ab6fda5dea9076a32984eb8b56013f5e2}} 
+virtual void \mbox{\hyperlink{classCommand_ab6fda5dea9076a32984eb8b56013f5e2}{run}} (unordered\+\_\+map$<$ string, string $>$ params)=0
+\begin{DoxyCompactList}\small\item\em Virtual function used to execute the command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommand_a7818e579129c66c9b2862a8209b8dc2a}\label{classCommand_a7818e579129c66c9b2862a8209b8dc2a}} 
+string \mbox{\hyperlink{classCommand_a7818e579129c66c9b2862a8209b8dc2a}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the command name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommand_ab9418285601183d9c77264f25d8b740a}\label{classCommand_ab9418285601183d9c77264f25d8b740a}} 
+string \mbox{\hyperlink{classCommand_ab9418285601183d9c77264f25d8b740a}{get\+Description}} () const
+\begin{DoxyCompactList}\small\item\em Get the command description. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommand_ad46ec4cf915709a2553b55b9f491a6d2}\label{classCommand_ad46ec4cf915709a2553b55b9f491a6d2}} 
+vector$<$ string $>$ \mbox{\hyperlink{classCommand_ad46ec4cf915709a2553b55b9f491a6d2}{get\+Parameters}} () const
+\begin{DoxyCompactList}\small\item\em Get the command parameter list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class used to build commands that can be executed on command-\/line. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/tareq/workplace/backtester/include/command.\+h\end{DoxyCompactItemize}

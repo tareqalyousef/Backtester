@@ -1,0 +1,48 @@
+\hypertarget{classPosition}{}\doxysection{Position Class Reference}
+\label{classPosition}\index{Position@{Position}}
+
+
+Represents a long or short position.  
+
+
+
+
+{\ttfamily \#include $<$position.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}\label{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}} 
+enum \mbox{\hyperlink{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}{Position\+Type}} \{ {\bfseries L\+O\+NG}, 
+{\bfseries S\+H\+O\+RT}
+ \}
+\begin{DoxyCompactList}\small\item\em Denotes a long or short position type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPosition_ab4f24afa731574763ceab55855137254}\label{classPosition_ab4f24afa731574763ceab55855137254}} 
+\mbox{\hyperlink{classPosition_ab4f24afa731574763ceab55855137254}{Position}} (\mbox{\hyperlink{classDate}{Date}} timestamp, string symbol, int shares, \mbox{\hyperlink{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}{Position\+Type}} position\+Type, double price)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classPosition}{Position}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPosition_a9e2706ff4c444afb082cbcbc711617eb}\label{classPosition_a9e2706ff4c444afb082cbcbc711617eb}} 
+int \mbox{\hyperlink{classPosition_a9e2706ff4c444afb082cbcbc711617eb}{get\+Shares}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of shares involved in this position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPosition_af39a3253d28d5219ef34296d62d3c26d}\label{classPosition_af39a3253d28d5219ef34296d62d3c26d}} 
+\mbox{\hyperlink{classDate}{Date}} \mbox{\hyperlink{classPosition_af39a3253d28d5219ef34296d62d3c26d}{get\+Timestamp}} ()
+\begin{DoxyCompactList}\small\item\em Get the timestamp at which this position was opened. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPosition_adcc903197aa9d7014854e6bafba3d058}\label{classPosition_adcc903197aa9d7014854e6bafba3d058}} 
+string \mbox{\hyperlink{classPosition_adcc903197aa9d7014854e6bafba3d058}{get\+Symbol}} ()
+\begin{DoxyCompactList}\small\item\em Get the symbol involved with this position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPosition_a3a5984600969c250977edc94a92ce774}\label{classPosition_a3a5984600969c250977edc94a92ce774}} 
+double \mbox{\hyperlink{classPosition_a3a5984600969c250977edc94a92ce774}{get\+Price}} ()
+\begin{DoxyCompactList}\small\item\em Get the price of this position the instant it was opened. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPosition_aa41795b1ee953e9f3fa727865d6e83d4}\label{classPosition_aa41795b1ee953e9f3fa727865d6e83d4}} 
+\mbox{\hyperlink{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}{Position\+Type}} \mbox{\hyperlink{classPosition_aa41795b1ee953e9f3fa727865d6e83d4}{get\+Position\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the position type (short or long). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a long or short position. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/tareq/workplace/backtester/include/position.\+h\end{DoxyCompactItemize}

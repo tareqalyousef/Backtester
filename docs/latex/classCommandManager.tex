@@ -1,0 +1,37 @@
+\hypertarget{classCommandManager}{}\doxysection{Command\+Manager Class Reference}
+\label{classCommandManager}\index{CommandManager@{CommandManager}}
+
+
+Class that contains and executes all commands.  
+
+
+
+
+{\ttfamily \#include $<$command\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCommandManager_a8a13226bf933396a3f35dfb5bee3e813}\label{classCommandManager_a8a13226bf933396a3f35dfb5bee3e813}} 
+\mbox{\hyperlink{classCommandManager_a8a13226bf933396a3f35dfb5bee3e813}{Command\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classCommandManager}{Command\+Manager}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommandManager_ae6a6acf03e200dfc65a7a26fbbfd207d}\label{classCommandManager_ae6a6acf03e200dfc65a7a26fbbfd207d}} 
+\mbox{\hyperlink{classCommandManager_ae6a6acf03e200dfc65a7a26fbbfd207d}{$\sim$\+Command\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Comman Manager object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommandManager_a78a71334c7c11eb0c3931c4576f3811a}\label{classCommandManager_a78a71334c7c11eb0c3931c4576f3811a}} 
+void \mbox{\hyperlink{classCommandManager_a78a71334c7c11eb0c3931c4576f3811a}{parse}} (vector$<$ string $>$ args)
+\begin{DoxyCompactList}\small\item\em Parses the given arguments and executes a matching command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommandManager_a6617d3b1d8f2d2625306026ad53dbf7c}\label{classCommandManager_a6617d3b1d8f2d2625306026ad53dbf7c}} 
+void \mbox{\hyperlink{classCommandManager_a6617d3b1d8f2d2625306026ad53dbf7c}{add\+Command}} (\mbox{\hyperlink{classCommand}{Command}} $\ast$command)
+\begin{DoxyCompactList}\small\item\em Add a command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommandManager_ab22fa0d2e6a7bf101fee6b4aef99a032}\label{classCommandManager_ab22fa0d2e6a7bf101fee6b4aef99a032}} 
+vector$<$ \mbox{\hyperlink{classCommand}{Command}} $\ast$ $>$ \mbox{\hyperlink{classCommandManager_ab22fa0d2e6a7bf101fee6b4aef99a032}{get\+Commands}} ()
+\begin{DoxyCompactList}\small\item\em Get list of all commands available for the command-\/line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that contains and executes all commands. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/tareq/workplace/backtester/include/command\+Manager.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{classExampleStrategy}{}\doxysection{Example\+Strategy Class Reference}
+\label{classExampleStrategy}\index{ExampleStrategy@{ExampleStrategy}}
+
+
+An example trading strategy.  
+
+
+
+
+{\ttfamily \#include $<$example\+Strategy.\+h$>$}
+
+Inheritance diagram for Example\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classExampleStrategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExampleStrategy_a5b29ed234f0da65901458eebf37559ee}\label{classExampleStrategy_a5b29ed234f0da65901458eebf37559ee}} 
+\mbox{\hyperlink{classExampleStrategy_a5b29ed234f0da65901458eebf37559ee}{Example\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classExampleStrategy}{Example\+Strategy}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classExampleStrategy_a1903564f6b5871ab9d70301fd327534f}\label{classExampleStrategy_a1903564f6b5871ab9d70301fd327534f}} 
+void \mbox{\hyperlink{classExampleStrategy_a1903564f6b5871ab9d70301fd327534f}{on\+Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Called during initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classExampleStrategy_a663b0ad9fa08a2c92f8af8e0496040eb}\label{classExampleStrategy_a663b0ad9fa08a2c92f8af8e0496040eb}} 
+void \mbox{\hyperlink{classExampleStrategy_a663b0ad9fa08a2c92f8af8e0496040eb}{on\+Day}} ()
+\begin{DoxyCompactList}\small\item\em Called every \char`\"{}day\char`\"{} in the backtest. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classExampleStrategy_a53174bca1e651944e31e56e0e6dbe314}{on\+Order\+Filled}} (\mbox{\hyperlink{classOrder}{Order}} $\ast$order, \mbox{\hyperlink{classPosition}{Position}} $\ast$position, double price, int shares)
+\begin{DoxyCompactList}\small\item\em Called after an order is filled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An example trading strategy. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classExampleStrategy_a53174bca1e651944e31e56e0e6dbe314}\label{classExampleStrategy_a53174bca1e651944e31e56e0e6dbe314}} 
+\index{ExampleStrategy@{ExampleStrategy}!onOrderFilled@{onOrderFilled}}
+\index{onOrderFilled@{onOrderFilled}!ExampleStrategy@{ExampleStrategy}}
+\doxysubsubsection{\texorpdfstring{onOrderFilled()}{onOrderFilled()}}
+{\footnotesize\ttfamily void Example\+Strategy\+::on\+Order\+Filled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOrder}{Order}} $\ast$}]{order,  }\item[{\mbox{\hyperlink{classPosition}{Position}} $\ast$}]{position,  }\item[{double}]{price,  }\item[{int}]{shares }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called after an order is filled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order that opened the position. \\
+\hline
+{\em position} & The position that was added or removed. \\
+\hline
+{\em price} & The price at which the position was opened or closed at. \\
+\hline
+{\em shares} & The number of shares that were filled. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classStrategy_a4fc07b6c4dc510605c2e60f683923d59}{Strategy}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/tareq/workplace/backtester/include/example\+Strategy.\+h\end{DoxyCompactItemize}

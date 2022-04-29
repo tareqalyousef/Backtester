@@ -1,0 +1,182 @@
+\hypertarget{classStrategy}{}\doxysection{Strategy Class Reference}
+\label{classStrategy}\index{Strategy@{Strategy}}
+
+
+Abstract class used for creating a trading strategy.  
+
+
+
+
+{\ttfamily \#include $<$strategy.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStrategy_a86ea037bcfc95e2eac64844c58635c93}\label{classStrategy_a86ea037bcfc95e2eac64844c58635c93}} 
+string \mbox{\hyperlink{classStrategy_a86ea037bcfc95e2eac64844c58635c93}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get nickname of the strategy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a2a1bc9ec7d99bcb82d767ea937f3f7de}\label{classStrategy_a2a1bc9ec7d99bcb82d767ea937f3f7de}} 
+void \mbox{\hyperlink{classStrategy_a2a1bc9ec7d99bcb82d767ea937f3f7de}{simulate}} ()
+\begin{DoxyCompactList}\small\item\em This method continuously calls the tick() function till the backtester is complete. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a55e566c0c1454be53b02fda043e19ecb}\label{classStrategy_a55e566c0c1454be53b02fda043e19ecb}} 
+void \mbox{\hyperlink{classStrategy_a55e566c0c1454be53b02fda043e19ecb}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Allows to set custom parameters for backtester. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a890412765264883cca95a94454e660b9}\label{classStrategy_a890412765264883cca95a94454e660b9}} 
+int \mbox{\hyperlink{classStrategy_a890412765264883cca95a94454e660b9}{get\+Wins}} ()
+\begin{DoxyCompactList}\small\item\em Get current number of profitable trades. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_aa2762a86ace186dda444376fc4009845}\label{classStrategy_aa2762a86ace186dda444376fc4009845}} 
+int \mbox{\hyperlink{classStrategy_aa2762a86ace186dda444376fc4009845}{get\+Losses}} ()
+\begin{DoxyCompactList}\small\item\em Get current number of nonprofitable trades. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a72ef45a824b43fb2cd9aa57bdf26038b}\label{classStrategy_a72ef45a824b43fb2cd9aa57bdf26038b}} 
+int \mbox{\hyperlink{classStrategy_a72ef45a824b43fb2cd9aa57bdf26038b}{get\+Transaction\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of transactions created to current date. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_abfb111c3b69ac7c4f2ae79c03251b77d}\label{classStrategy_abfb111c3b69ac7c4f2ae79c03251b77d}} 
+double \mbox{\hyperlink{classStrategy_abfb111c3b69ac7c4f2ae79c03251b77d}{get\+Sum\+Win\+Percent}} ()
+\begin{DoxyCompactList}\small\item\em Get sum of all percent changes for wins. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_ac9fe52219337ae776a9dd543bf117edb}\label{classStrategy_ac9fe52219337ae776a9dd543bf117edb}} 
+double \mbox{\hyperlink{classStrategy_ac9fe52219337ae776a9dd543bf117edb}{get\+Sum\+Loss\+Percent}} ()
+\begin{DoxyCompactList}\small\item\em Get sum of all percent changes for losses. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_afe2368eb7c4a069ded89fbf3783e80b8}\label{classStrategy_afe2368eb7c4a069ded89fbf3783e80b8}} 
+vector$<$ \mbox{\hyperlink{classOrder}{Order}} $\ast$ $>$ \mbox{\hyperlink{classStrategy_afe2368eb7c4a069ded89fbf3783e80b8}{get\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em Gets all current, unfilled orders. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a1dede7ba285a25bdb5e42ee8547ab2ca}\label{classStrategy_a1dede7ba285a25bdb5e42ee8547ab2ca}} 
+vector$<$ \mbox{\hyperlink{classPosition}{Position}} $\ast$ $>$ \mbox{\hyperlink{classStrategy_a1dede7ba285a25bdb5e42ee8547ab2ca}{get\+Positions}} ()
+\begin{DoxyCompactList}\small\item\em Gets all current positions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_ae1ab0bfac74b83e9e6e8fb1e77100fab}\label{classStrategy_ae1ab0bfac74b83e9e6e8fb1e77100fab}} 
+vector$<$ string $>$ \mbox{\hyperlink{classStrategy_ae1ab0bfac74b83e9e6e8fb1e77100fab}{get\+Symbols}} ()
+\begin{DoxyCompactList}\small\item\em Get all tickers loaded into the strategy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_af043240a9204ea638ceaab07b71becc2}\label{classStrategy_af043240a9204ea638ceaab07b71becc2}} 
+\mbox{\hyperlink{classDate}{Date}} \mbox{\hyperlink{classStrategy_af043240a9204ea638ceaab07b71becc2}{get\+Start\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Get start date. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a6fd1edf59828491084853bb0c4d1933f}\label{classStrategy_a6fd1edf59828491084853bb0c4d1933f}} 
+\mbox{\hyperlink{classDate}{Date}} \mbox{\hyperlink{classStrategy_a6fd1edf59828491084853bb0c4d1933f}{get\+End\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Get end date. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a312aeb28f054ae57b7dac0b21625bff6}\label{classStrategy_a312aeb28f054ae57b7dac0b21625bff6}} 
+double \mbox{\hyperlink{classStrategy_a312aeb28f054ae57b7dac0b21625bff6}{get\+Buying\+Power}} ()
+\begin{DoxyCompactList}\small\item\em Get buying power. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a7a470fe967df42f9db44bf502a99f7e8}\label{classStrategy_a7a470fe967df42f9db44bf502a99f7e8}} 
+\mbox{\hyperlink{classDate}{Date}} \mbox{\hyperlink{classStrategy_a7a470fe967df42f9db44bf502a99f7e8}{get\+Current\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Get current date. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a430040a36cb1b996f8ce83e6942ad718}\label{classStrategy_a430040a36cb1b996f8ce83e6942ad718}} 
+double \mbox{\hyperlink{classStrategy_a430040a36cb1b996f8ce83e6942ad718}{get\+Equity}} ()
+\begin{DoxyCompactList}\small\item\em Get current, total value of account. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a87228d03c7a85422f666f3b94a295f16}\label{classStrategy_a87228d03c7a85422f666f3b94a295f16}} 
+int \mbox{\hyperlink{classStrategy_a87228d03c7a85422f666f3b94a295f16}{get\+Position\+Count}} (\mbox{\hyperlink{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}{Position\+::\+Position\+Type}} position\+Type, string symbol)
+\begin{DoxyCompactList}\small\item\em Get number of shares for specified position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a147bd0d408e03b5924ce1fd5da2b4753}\label{classStrategy_a147bd0d408e03b5924ce1fd5da2b4753}} 
+int \mbox{\hyperlink{classStrategy_a147bd0d408e03b5924ce1fd5da2b4753}{get\+Position\+Count}} (string symbol)
+\begin{DoxyCompactList}\small\item\em Get number of shares for specified position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a6b097d57c0b7c5666a63a9f2c1b2f4c8}\label{classStrategy_a6b097d57c0b7c5666a63a9f2c1b2f4c8}} 
+int \mbox{\hyperlink{classStrategy_a6b097d57c0b7c5666a63a9f2c1b2f4c8}{get\+Order\+Count}} (\mbox{\hyperlink{classOrder_aa88b067054a26dd04c2b25b41996b7b0}{Order\+::\+Order\+Type}} order\+Type, \mbox{\hyperlink{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}{Position\+::\+Position\+Type}} position\+Type, string symbol)
+\begin{DoxyCompactList}\small\item\em Get number of shares for specified order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a41ee8d8f00b80a97099beddc836162a1}\label{classStrategy_a41ee8d8f00b80a97099beddc836162a1}} 
+int \mbox{\hyperlink{classStrategy_a41ee8d8f00b80a97099beddc836162a1}{get\+Order\+Count}} (\mbox{\hyperlink{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}{Position\+::\+Position\+Type}} position\+Type, string symbol)
+\begin{DoxyCompactList}\small\item\em Get number of shares for specified order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_ab44c1251d3c9b24e6f57e1eeac908460}\label{classStrategy_ab44c1251d3c9b24e6f57e1eeac908460}} 
+int \mbox{\hyperlink{classStrategy_ab44c1251d3c9b24e6f57e1eeac908460}{get\+Order\+Count}} (string symbol)
+\begin{DoxyCompactList}\small\item\em Get number of shares for specified order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_ad956914770c8bce653f7ea153bac055b}\label{classStrategy_ad956914770c8bce653f7ea153bac055b}} 
+double \mbox{\hyperlink{classStrategy_ad956914770c8bce653f7ea153bac055b}{get\+Average\+Win}} ()
+\begin{DoxyCompactList}\small\item\em Get the average win percent for profitable transactions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_ae2048b44a4fc34b537ab84e59c4496cf}\label{classStrategy_ae2048b44a4fc34b537ab84e59c4496cf}} 
+double \mbox{\hyperlink{classStrategy_ae2048b44a4fc34b537ab84e59c4496cf}{get\+Average\+Loss}} ()
+\begin{DoxyCompactList}\small\item\em Get the average loss percent for nonprofitable transactions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_ae6b198ed344396c0b7f3e25a57cd454e}\label{classStrategy_ae6b198ed344396c0b7f3e25a57cd454e}} 
+double \mbox{\hyperlink{classStrategy_ae6b198ed344396c0b7f3e25a57cd454e}{get\+Initial\+Equity}} ()
+\begin{DoxyCompactList}\small\item\em Get initial equity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a12705b230fbc42184cb92d6eb7437bb7}\label{classStrategy_a12705b230fbc42184cb92d6eb7437bb7}} 
+double \mbox{\hyperlink{classStrategy_a12705b230fbc42184cb92d6eb7437bb7}{get\+Win\+Rate}} ()
+\begin{DoxyCompactList}\small\item\em Get the current winrate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a8350e894fb466d25dbac182d57086578}\label{classStrategy_a8350e894fb466d25dbac182d57086578}} 
+int \mbox{\hyperlink{classStrategy_a8350e894fb466d25dbac182d57086578}{get\+Duration}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of days between start date and end date. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a8c44c8beea24726bca11296bd00647a0}\label{classStrategy_a8c44c8beea24726bca11296bd00647a0}} 
+int \mbox{\hyperlink{classStrategy_a8c44c8beea24726bca11296bd00647a0}{get\+Trading\+Duration}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of days between start date and end date in which the market was opened. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a667c61079b30797c0c24bfde4b4f82cb}\label{classStrategy_a667c61079b30797c0c24bfde4b4f82cb}} 
+vector$<$ double $>$ \mbox{\hyperlink{classStrategy_a667c61079b30797c0c24bfde4b4f82cb}{get\+Return\+History}} ()
+\begin{DoxyCompactList}\small\item\em Get list of all percent changes in equity till current date. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a1b1d5ad7d558ac47c0db407d22977362}\label{classStrategy_a1b1d5ad7d558ac47c0db407d22977362}} 
+vector$<$ double $>$ \mbox{\hyperlink{classStrategy_a1b1d5ad7d558ac47c0db407d22977362}{get\+Equity\+History}} ()
+\begin{DoxyCompactList}\small\item\em Get list of all previous equities till current date. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_aa06198f962378a808476d4cf7fa8a7e0}\label{classStrategy_aa06198f962378a808476d4cf7fa8a7e0}} 
+void \mbox{\hyperlink{classStrategy_aa06198f962378a808476d4cf7fa8a7e0}{display\+Logs}} ()
+\begin{DoxyCompactList}\small\item\em Prints all date-\/log pairs to console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStrategy_a18bdd7e69a2e86278c69ff297a506376}\label{classStrategy_a18bdd7e69a2e86278c69ff297a506376}} 
+\mbox{\hyperlink{classStrategy_a18bdd7e69a2e86278c69ff297a506376}{Strategy}} (string name)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classStrategy}{Strategy}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_ac65bd97015c7180865c66602ebe6554f}\label{classStrategy_ac65bd97015c7180865c66602ebe6554f}} 
+virtual void \mbox{\hyperlink{classStrategy_ac65bd97015c7180865c66602ebe6554f}{on\+Day}} ()=0
+\begin{DoxyCompactList}\small\item\em Called every \char`\"{}day\char`\"{} in the backtest. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_aa41a4100db3668dfc27dfd4560f1ed56}\label{classStrategy_aa41a4100db3668dfc27dfd4560f1ed56}} 
+virtual void \mbox{\hyperlink{classStrategy_aa41a4100db3668dfc27dfd4560f1ed56}{on\+Initialize}} ()=0
+\begin{DoxyCompactList}\small\item\em Called during initialization. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classStrategy_a4fc07b6c4dc510605c2e60f683923d59}{on\+Order\+Filled}} (\mbox{\hyperlink{classOrder}{Order}} $\ast$order, \mbox{\hyperlink{classPosition}{Position}} $\ast$position, double price, int shares)=0
+\begin{DoxyCompactList}\small\item\em Called after an order is filled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_ac08603d794f0109d360fb2f99883f922}\label{classStrategy_ac08603d794f0109d360fb2f99883f922}} 
+vector$<$ string $>$ \mbox{\hyperlink{classStrategy_ac08603d794f0109d360fb2f99883f922}{get\+All\+Symbols}} ()
+\begin{DoxyCompactList}\small\item\em Get all symbols available to load. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a1c17e42d221bfd7f480afdca1813e9f4}\label{classStrategy_a1c17e42d221bfd7f480afdca1813e9f4}} 
+void \mbox{\hyperlink{classStrategy_a1c17e42d221bfd7f480afdca1813e9f4}{add\+Symbol}} (string symbol)
+\begin{DoxyCompactList}\small\item\em Load a stock ticker for backtesting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a0f7fda0f1ef0677484c8d518a60946be}\label{classStrategy_a0f7fda0f1ef0677484c8d518a60946be}} 
+void \mbox{\hyperlink{classStrategy_a0f7fda0f1ef0677484c8d518a60946be}{set\+Start\+Date}} (\mbox{\hyperlink{classDate}{Date}} date)
+\begin{DoxyCompactList}\small\item\em Set first day for backtesting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a14fc9a15e5505d53ff443b9771ae3abe}\label{classStrategy_a14fc9a15e5505d53ff443b9771ae3abe}} 
+void \mbox{\hyperlink{classStrategy_a14fc9a15e5505d53ff443b9771ae3abe}{set\+End\+Date}} (\mbox{\hyperlink{classDate}{Date}} date)
+\begin{DoxyCompactList}\small\item\em Set last date for backtesting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a681f160740fc812f0c2cfc9f95909b93}\label{classStrategy_a681f160740fc812f0c2cfc9f95909b93}} 
+void \mbox{\hyperlink{classStrategy_a681f160740fc812f0c2cfc9f95909b93}{set\+Initial\+Equity}} (int equity)
+\begin{DoxyCompactList}\small\item\em Set initial capital. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_adcee7fb6b13e02d7fd05f04d8c327b04}\label{classStrategy_adcee7fb6b13e02d7fd05f04d8c327b04}} 
+unordered\+\_\+map$<$ string, vector$<$ \mbox{\hyperlink{classBar}{Bar}} $>$ $>$ \mbox{\hyperlink{classStrategy_adcee7fb6b13e02d7fd05f04d8c327b04}{get\+Market}} ()
+\begin{DoxyCompactList}\small\item\em Get all symbols with corresponding daily bars till current date. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a87c425467f4712ce6dd69bae171ed472}\label{classStrategy_a87c425467f4712ce6dd69bae171ed472}} 
+\mbox{\hyperlink{classOrder}{Order}} $\ast$ \mbox{\hyperlink{classStrategy_a87c425467f4712ce6dd69bae171ed472}{create\+Order}} (string symbol, int shares, \mbox{\hyperlink{classOrder_aa88b067054a26dd04c2b25b41996b7b0}{Order\+::\+Order\+Type}} order\+Type, \mbox{\hyperlink{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}{Position\+::\+Position\+Type}} position\+Type)
+\begin{DoxyCompactList}\small\item\em Create an order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_ab71841a7f911db1216952e6dbad4588b}\label{classStrategy_ab71841a7f911db1216952e6dbad4588b}} 
+\mbox{\hyperlink{classOrder}{Order}} $\ast$ \mbox{\hyperlink{classStrategy_ab71841a7f911db1216952e6dbad4588b}{create\+Order}} (string symbol, int shares, double limit, \mbox{\hyperlink{classOrder_aa88b067054a26dd04c2b25b41996b7b0}{Order\+::\+Order\+Type}} order\+Type, \mbox{\hyperlink{classPosition_ae53eecf85b7c8c5474a0cf5fff3c42a8}{Position\+::\+Position\+Type}} position\+Type)
+\begin{DoxyCompactList}\small\item\em Create an order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a758e58b8f82fbac902b039679b8572ab}\label{classStrategy_a758e58b8f82fbac902b039679b8572ab}} 
+void \mbox{\hyperlink{classStrategy_a758e58b8f82fbac902b039679b8572ab}{cancel\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em Removes all orders that have not been filled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrategy_a5fb42d96b9f2499d99773e3e2aea52ee}\label{classStrategy_a5fb42d96b9f2499d99773e3e2aea52ee}} 
+void \mbox{\hyperlink{classStrategy_a5fb42d96b9f2499d99773e3e2aea52ee}{log}} (string content)
+\begin{DoxyCompactList}\small\item\em Adds an entry to the logs that will be printed after strategy execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class used for creating a trading strategy. 
+
+All logic for creating a trading strategy is implemented in classes that inherit this class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStrategy_a4fc07b6c4dc510605c2e60f683923d59}\label{classStrategy_a4fc07b6c4dc510605c2e60f683923d59}} 
+\index{Strategy@{Strategy}!onOrderFilled@{onOrderFilled}}
+\index{onOrderFilled@{onOrderFilled}!Strategy@{Strategy}}
+\doxysubsubsection{\texorpdfstring{onOrderFilled()}{onOrderFilled()}}
+{\footnotesize\ttfamily virtual void Strategy\+::on\+Order\+Filled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOrder}{Order}} $\ast$}]{order,  }\item[{\mbox{\hyperlink{classPosition}{Position}} $\ast$}]{position,  }\item[{double}]{price,  }\item[{int}]{shares }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Called after an order is filled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order that opened the position. \\
+\hline
+{\em position} & The position that was added or removed. \\
+\hline
+{\em price} & The price at which the position was opened or closed at. \\
+\hline
+{\em shares} & The number of shares that were filled. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/tareq/workplace/backtester/include/strategy.\+h\end{DoxyCompactItemize}
