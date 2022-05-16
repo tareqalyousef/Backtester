@@ -33,6 +33,7 @@ Create a class that inherits from `Strategy`. You are given a few virtual functi
 ```c++
 class ExampleStrategy : public Strategy {
     public:
+        ExampleStrategy();
         void onInitialize();
         void onDay();
         void onOrderFilled(Order* order, Position* position, double price, int shares);
